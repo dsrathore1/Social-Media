@@ -8,7 +8,7 @@ import { BsArchive } from "react-icons/bs";
 
 export default function Navigation() {
   return (
-    <div className="shadow-md shadow-gray-300 rounded-md w-[30vw] bg-fixed md:static h-[50vh] bg-white">
+    <div className="shadow-md shadow-gray-300 rounded-md w-[30vw] h-[50vh] bg-white">
       <h1 className="text-center font-medium text-2xl pt-3 text-gray-300">
         Navigation
       </h1>
