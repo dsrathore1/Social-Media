@@ -1,0 +1,12 @@
+{
+  "private": "true",
+  "workspaces": [
+    "/Backend",
+    "/Frontend"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd Frontend && npm run dev",
+    "backend": "cd Backend && npm run dev"
+  }
+}
