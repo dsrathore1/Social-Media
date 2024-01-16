@@ -4,11 +4,12 @@ import BannerImg from "../Assets/Banner_Image.jpg";
 import ProfilePic from "../Assets/profilePic.jpg";
 import { BsFilePost } from 'react-icons/bs';
 import { BiGroup, BiPhotoAlbum } from 'react-icons/bi';
+import Link from "next/link";
 
 const Banner = () => {
     return (
         <>
-            <div className=''>
+            <div>
                 <div className='flex flex-col justify-center items-evenly bg-white rounded-xl shadow-md shadow-gray-200'>
                     <Image className='w-full h-[30vh] object-fill rounded-ss-xl rounded-se-xl' alt='Banner_Image' src={BannerImg} height={200} width={400} />
                     <div className='relative'>
@@ -19,14 +20,11 @@ const Banner = () => {
                         </div>
                     </div>
                     <ul className='flex w-full mt-12 py-3 justify-around items-center'>
-                        <li className='flex gap-2 justify-center items-center'><BsFilePost />Post</li>
-                        <li className='flex gap-2 justify-center items-center'><span className='text-xl'>ℹ</span> About</li>
-                        <li className='flex gap-2 justify-center items-center'><BiGroup />Friends</li>
-                        <li className='flex gap-2 justify-center items-center'><BiPhotoAlbum />Photos</li>
+                        <Link href="/friends/posts" className='flex gap-2 justify-center items-center'><BsFilePost />Post</Link>
+                        <Link href="/friends/about" className='flex gap-2 justify-center items-center'><span className='text-xl'>ℹ</span> About</Link>
+                        <Link href="/friends" className='flex gap-2 justify-center items-center'><BiGroup />Friends</Link>
+                        <Link href="/friends/photos" className='flex gap-2 justify-center items-center'><BiPhotoAlbum />Photos</Link>
                     </ul>
-                </div>
-                <div className='bg-white h-full w-full rounded-xl    mt-5 p-5'>
-                    <h1 className='text-2xl uppercase'>Friends</h1>
                 </div>
             </div>
         </>
