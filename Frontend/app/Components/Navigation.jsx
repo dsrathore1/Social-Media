@@ -12,37 +12,38 @@ export default function Navigation() {
       <h1 className="text-center font-medium text-2xl pt-3 text-gray-300">
         Navigation
       </h1>
-      <div className="flex gap-5 flex-col items-start justify-between py-4 px-4 transition-all ease-in-out duration-300">
+      <div className="flex gap-5 flex-col items-start justify-between py-4 px-4 transition-all ease-in-out duration-500">
         <Link
-          className="flex justify-start gap-4 items-center font-normal text-sm text-white w-full bg-socialBlue py-3 px-2 scale-125 rounded-md shadow-md hover:bg-opacity-70 transition-all ease-in-out duration-300"
+          className="flex justify-start gap-4 items-center font-normal text-sm text-white w-full bg-socialBlue py-3 px-2 scale-125 rounded-md shadow-md hover:bg-opacity-70 transition-all ease-in-out duration-500"
           href="/Home"
         >
           <AiOutlineHome className="text-xl" />
           Home
         </Link>
         <Link
-          className="flex justify-start gap-4 items-center font-normal text-md text-black w-full py-2 px-2 rounded-md hover:bg-socialBlue hover:opacity-85 hover:text-white hover:scale-125 transition-all ease-in-out duration-300"
+          className="flex justify-start gap-4 items-center font-normal text-md text-black w-full py-2 px-2 rounded-md hover:bg-socialBlue hover:opacity-85 hover:text-white hover:scale-125 transition-all ease-in-out duration-500"
           href="/friends"
         >
           <RiGroupLine className="text-xl" />
           Friends
         </Link>
         <Link
-          className="flex justify-start gap-4 items-center font-normal text-md text-black w-full py-2 px-2 rounded-md"
-          href="#"
+          className="flex justify-start gap-4 items-center font-normal text-md text-black w-full py-2 px-2 rounded-md hover:bg-socialBlue hover:opacity-85 hover:text-white hover:scale-125 transition-all ease-in-out duration-500"
+          href="/notifications
+          "
         >
           <GrNotification className="text-xl" />
           Notification
         </Link>
         <Link
-          className="flex justify-start gap-4 items-center font-normal text-md text-black w-full py-2 px-2 rounded-md"
+          className="flex justify-start gap-4 items-center font-normal text-md text-black w-full py-2 px-2 rounded-md hover:bg-socialBlue hover:opacity-85 hover:text-white hover:scale-125 transition-all ease-in-out duration-500"
           href="/savedPost"
         >
           <BsArchive className="text-xl" /> 
           Saved Post
         </Link>
         <Link
-          className="flex justify-start gap-4 items-center font-normal text-md text-black w-full py-2 px-2 rounded-md"
+          className="flex justify-start gap-4 items-center font-normal text-md text-black w-full py-2 px-2 rounded-md hover:bg-socialBlue hover:opacity-85 hover:text-white hover:scale-125 transition-all ease-in-out duration-500"
           href="/login"
         >
           <RiLogoutCircleLine className="text-xl" />

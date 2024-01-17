@@ -3,11 +3,11 @@ import React from 'react'
 const SignUp = () => {
     return (
 
-        <div class="bg-white py-6 sm:py-8 lg:py-12 flex flex-col w-full gap-10">
+        <div class="py-6 sm:py-8 lg:py-2 flex flex-col w-full gap-10">
             <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
                 <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">Sign Up</h2>
 
-                <form class="mx-auto max-w-lg rounded-lg border">
+                <form class="mx-auto max-w-lg bg-white rounded-lg border">
                     <div class="flex flex-col gap-4 p-4 md:p-8">
                         <div>
                             <label for="email" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">Username</label>
@@ -51,7 +51,7 @@ const SignUp = () => {
                     </div>
 
                     <div class="flex items-center justify-center bg-gray-100 p-4">
-                        <p class="text-center text-sm text-gray-500">Do you have an account? <a href="#" class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Login</a></p>
+                        <p class="text-center text-sm text-gray-500">Do you have an account? <a href="/login" class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Login</a></p>
                     </div>
                 </form>
             </div>

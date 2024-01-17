@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsImage, BsThreeDotsVertical } from "react-icons/bs";
 
 import ProfilePic from "../Assets/profilePic.jpg";
 import PostPhoto from "../Assets/post-photo.jpg";
+import { AiOutlineHeart, AiOutlineShareAlt } from "react-icons/ai";
+import { BiMessage } from "react-icons/bi";
 
 const Post = () => {
   return (
-    <div className="flex h-[100vh] flex-col justify-between bg-white mt-5 rounded-md shadow-lg shadow-gray-300 p-5">
+    <div className="flex h-full flex-col justify-between bg-white mt-5 rounded-md shadow-lg shadow-gray-300 p-5">
       <div className="w-full">
         <div className="flex">
           <Image
@@ -48,6 +50,25 @@ const Post = () => {
               height={900}
               width={900}
             />
+          </div>
+          <div className="flex justify-start items-center my-5 gap-16">
+            <span className="flex items-center gap-3 text-lg">
+              <AiOutlineHeart className="text-3xl text-gray-500" />
+              42
+            </span>
+            <span className="flex items-center gap-3 text-lg">
+              <BiMessage className="text-3xl text-gray-500" />
+              11
+            </span>
+            <span className="flex items-center gap-3 text-lg">
+              <AiOutlineShareAlt className="text-3xl text-gray-500" />
+              5
+            </span>
+          </div>
+          <div className="flex justify-start items-center gap-6">
+            <Image className="rounded-full w-14 h-12 cursor-pointer object-cover" height={40} width={50} alt="profilePic" src={ProfilePic} />
+            <input className="px-4 py-3 w-full border-2 rounded-full" placeholder="Leave your comment" />
+            <BsImage className="text-4xl text-gray-600" />
           </div>
         </div>
       </div>
