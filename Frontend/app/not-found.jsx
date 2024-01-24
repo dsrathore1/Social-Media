@@ -1,9 +1,13 @@
 "use client"
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from "next/navigation";
 
 const NotFoundPage = () => {
     const router = useRouter();
+
+    useEffect(() => {
+        document.title = "404 not-found";
+    });
     return (
         <>
             <div className='h-[90vh] flex flex-col w-full gap-10 justify-center items-center'>

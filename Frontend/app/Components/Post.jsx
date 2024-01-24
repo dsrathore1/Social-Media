@@ -29,7 +29,27 @@ const Post = () => {
                 2 hours ago
               </span>
             </div>
-            <BsThreeDotsVertical className="text-gray-500 text-xl mt-2" />
+            <button className="relative">
+              <BsThreeDotsVertical className="hover-threeDot text-gray-500 text-xl mt-2" />
+              {/* Dropdown start */}
+              <div className="dropdown hidden absolute -left-32 bg-white divide-y divide-gray-100 rounded-md shadow-xl border border-gray-100 w-[10rem] dark:bg-gray-700">
+                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                  </li>
+                </ul>
+              </div>
+              {/* dropdown end  */}
+            </button>
           </div>
         </div>
         <div className="mt-3">

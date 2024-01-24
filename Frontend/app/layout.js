@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from './Components/Navigation'
+import Trending from './Components/Trending'
+import CreateBtn from './Components/CreateBtn'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +17,9 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} bg-socialBg`}>
         <div className="flex mx-16 my-5 gap-10">
           <Navigation />
-        {children}
+          {children}
+          <Trending />
+          <CreateBtn />
         </div>
       </body>
     </html>

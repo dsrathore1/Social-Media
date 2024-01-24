@@ -11,7 +11,6 @@ const Route = ({ params }) => {
             {
                 params.user === "posts" ? <UserPosts /> :
                     params.user === "about" ? <UserAbout /> : params.user === "photos" ? <UserPhotos /> : <NotFound/>
-
             }
         </>
     )
