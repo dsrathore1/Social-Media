@@ -17,7 +17,7 @@ const Post = () => {
             alt="profilePic"
             height={100}
             width={100}
-            className="h-16 w-16 object-cover rounded-full"
+            className="h-14 w-16 object-cover rounded-full"
           />
           <div className="flex justify-between items-start w-full">
             <div className="flex flex-col justify-start px-3 items-start ">

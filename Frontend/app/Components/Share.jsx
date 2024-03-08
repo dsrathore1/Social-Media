@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { BsPerson } from "react-icons/bs";
 import { MdMood } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
@@ -9,6 +9,22 @@ import { GrLocation } from "react-icons/gr";
 import ProfilePic from "../Assets/profilePic.jpg";
 
 const Share = () => {
+  const successRes = async ({ coords }) => {
+    console.log(await coords);
+  };
+  const failedLoc = () => {
+    console.log("Some error occur, please have a look");
+  };
+
+  useEffect(() => {
+    const result = navigator.geolocation.getCurrentPosition(
+      successRes,
+      failedLoc
+    );
+
+    console.log(result);
+  });
+
   return (
     <div className="shadow-md bg-white p-2 w-full rounded-md">
       <div className="flex justify-start items-center p-2 gap-5">
@@ -17,7 +33,7 @@ const Share = () => {
           src={ProfilePic}
           height={100}
           width={100}
-          className="rounded-full w-16 h-16 object-cover"
+          className="rounded-full w-16 h-14 object-cover"
         />
         <textarea
           className="w-full px-3 py-2 text-lg border-2 rounded-md"
