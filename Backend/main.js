@@ -1,5 +1,5 @@
 import express from "express";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 import cors from "cors";
 import routes from "./Routes/routes.js";
 
@@ -18,5 +18,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use(routes);
 
 app.listen(PORT, () => {
-    console.log(`Your site url is http://localhost:${PORT} `);
+  console.log(`Your site url is http://localhost:${PORT} `);
 });

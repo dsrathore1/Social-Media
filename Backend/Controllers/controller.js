@@ -10,6 +10,4 @@ export const mainPage = (req, res) => {
   });
 };
 
-export const sharePost = (req, res) => {
-    
-};
+export const sharePost = (req, res) => {};
