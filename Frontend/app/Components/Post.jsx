@@ -33,18 +33,41 @@ const Post = () => {
               <BsThreeDotsVertical className="hover-threeDot text-gray-500 text-xl mt-2" />
               {/* Dropdown start */}
               <div className="dropdown hidden absolute -left-32 bg-white divide-y divide-gray-100 rounded-md shadow-xl border border-gray-100 w-[10rem] dark:bg-gray-700">
-                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                <ul
+                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownHoverButton"
+                >
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Dashboard
+                    </a>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Settings
+                    </a>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Earnings
+                    </a>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Sign out
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -81,13 +104,21 @@ const Post = () => {
               11
             </span>
             <span className="flex items-center gap-3 text-lg">
-              <AiOutlineShareAlt className="text-3xl text-gray-500" />
-              5
+              <AiOutlineShareAlt className="text-3xl text-gray-500" />5
             </span>
           </div>
           <div className="flex justify-start items-center gap-6">
-            <Image className="rounded-full w-14 h-12 cursor-pointer object-cover" height={40} width={50} alt="profilePic" src={ProfilePic} />
-            <input className="px-4 py-3 w-full border-2 rounded-full" placeholder="Leave your comment" />
+            <Image
+              className="rounded-full w-14 h-12 cursor-pointer object-cover"
+              height={40}
+              width={50}
+              alt="profilePic"
+              src={ProfilePic}
+            />
+            <input
+              className="px-4 py-3 w-full border-2 rounded-full"
+              placeholder="Leave your comment"
+            />
             <BsImage className="text-4xl text-gray-600" />
           </div>
         </div>

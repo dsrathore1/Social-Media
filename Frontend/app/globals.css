@@ -2,17 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    body {
-        @apply dark:bg-gray-800 bg-socialBg
-    }
+  body {
+    @apply dark:bg-gray-800 bg-socialBg;
+  }
 }
 
-.hover-threeDot:hover+.dropdown {
-    display: block;
+.hover-threeDot:hover + .dropdown {
+  display: block;
 }
 
 .dropdown:hover {
-    display: block;
+  display: block;
 }

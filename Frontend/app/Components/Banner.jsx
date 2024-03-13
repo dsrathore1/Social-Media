@@ -52,7 +52,8 @@ const Banner = () => {
                 pathname === "/friends/about"
                   ? "flex gap-2 justify-center items-center text-socialBlue"
                   : "flex gap-2 justify-center items-center"
-              }`}            >
+              }`}
+            >
               <span className="text-xl">ℹ</span> About
             </Link>
             <Link
@@ -61,7 +62,8 @@ const Banner = () => {
                 pathname === "/friends"
                   ? "flex gap-2 justify-center items-center text-socialBlue"
                   : "flex gap-2 justify-center items-center"
-              }`}            >
+              }`}
+            >
               <BiGroup />
               Friends
             </Link>
@@ -71,7 +73,8 @@ const Banner = () => {
                 pathname === "/friends/photos"
                   ? "flex gap-2 justify-center items-center text-socialBlue"
                   : "flex gap-2 justify-center items-center"
-              }`}            >
+              }`}
+            >
               <BiPhotoAlbum />
               Photos
             </Link>
