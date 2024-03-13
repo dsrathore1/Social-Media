@@ -31,9 +31,9 @@ const CreateNewPost = () => {
             <span className="flex justify-center items-center text-lg font-normal gap-2 hover:text-yellow-400 transition-all ease-in-out duration-200 cursor-pointer">
               <MdMood className="font-thin text-3xl" /> Mood
             </span>
-            <span className="flex justify-center items-center text-lg font-normal gap-2 transition-all ease-in-out duration-200 cursor-pointer hover:text-red-400">
+            <button className="flex justify-center items-center text-lg font-normal gap-2 transition-all ease-in-out duration-200 cursor-pointer hover:text-red-400">
               <GrLocation className="font-medium text-3xl" /> Location
-            </span>
+            </button>
           </div>
           <button className="bg-socialBlue text-white rounded-md px-8 hover:opacity-80 cursor-default active:translate-y-1 transition-all duration-200 ease-in-out py-2 text-lg mr-3">
             Share

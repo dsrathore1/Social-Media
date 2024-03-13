@@ -6,7 +6,11 @@
   ],
   "scripts": {
     "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "frontend": "cd Frontend && npm run dev",
-    "backend": "cd Backend && npm run dev"
+    "dev": "cd Frontend && npm run dev",
+    "devB": "cd Backend && npm run dev"
+  },
+  "dependencies": {
+    "clipboard-copy": "^4.0.1",
+    "emoji-picker-element": "^1.21.1"
   }
 }
