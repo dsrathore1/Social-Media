@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const UserSchema = mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
-    name: {
+    fullName: {
       type: String,
       trim: true,
       require: true,
@@ -10,11 +10,21 @@ const UserSchema = mongoose.Schema(
     email: {
       type: String,
       require: true,
+      unique: true,
+    },
+    pwd: String,
+    cPwd: String,
+    gender: String,
+    userName: String,
+    profilePic: {
+      type: String,
+      default:
+        "https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg",
     },
   },
   { timestamps: true }
 );
 
-const userModel = mongoose.models.user || mongoose.model("user", UserSchema);
+const UserModel = mongoose.model("user", UserSchema);
 
-export default userModel;
+export default UserModel;

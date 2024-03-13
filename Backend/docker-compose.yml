@@ -1,0 +1,35 @@
+version: "3"
+
+volumes:
+  db:
+    name: MongoDB-vol
+  backend-vol:
+services:
+  database:
+    container_name: MongoDB-Container
+    image: mongo:jammy
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    volumes:
+      - ./:/app
+      - db:/data/db
+
+  backend_service:
+    container_name: Backend-Container
+    image: fradriks/sm-backend
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    ports:
+      - 4000:4000
+    expose:
+      - 4000
+    volumes:
+      - backend-vol:/app
+      - ./:/app
+    depends_on:
+      - database
+    restart: always
+    stdin_open: true
