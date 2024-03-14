@@ -1,5 +1,6 @@
 import UserModel from "../Database/Models/userData.js";
 import bcrypt from "bcrypt";
+import generateTokenAndSetCookie from "../Utils/generateToken.js";
 
 export const signUp = async (req, res) => {
   const { fullName, email, pwd, cPwd, gender, userName } = req.body;
@@ -24,7 +25,7 @@ export const signUp = async (req, res) => {
   const profilePicture = `https://avatar.iran.liara.run/public/${gender}?username=${userName}`;
 
   try {
-    //! GENERATE NEW USER
+    //! CREATE NEW USER
     const newUser = await UserModel({
       userName,
       fullName,
@@ -34,6 +35,9 @@ export const signUp = async (req, res) => {
       profilePic: profilePicture,
     });
 
+    //! GENERATE JWT TOKEN
+    generateTokenAndSetCookie(newUser._id, res);
+
     if (newUser) {
       await newUser.save();
       res.status(201).json({
@@ -41,19 +45,51 @@ export const signUp = async (req, res) => {
         data: newUser,
       });
     } else {
-      res.status(404).json({ message: "Invalid user data" });
+      res.status(404).json({
+        message: "Invalid user data input please check it again",
+        error: error.message,
+      });
     }
   } catch (error) {
-    if (error) throw error;
+    if (error) throw error.message;
+    res.status(404).json({ error: "Interval server error" });
   }
 };
 
-export const login = (req, res) => {
-  res.send("Welcome to Login Route");
+export const login = async (req, res) => {
+  try {
+    const { userName, pwd } = req.body;
+
+    const user = await UserModel.findOne({ userName });
+
+    // console.log(userName, pwd);
+
+    const isPwdCorrect = await bcrypt.compare(pwd, user?.pwd || "");
+
+    if (!user || !isPwdCorrect) {
+      return res.status(404).json({ message: "Invalid Username or Password" });
+    }
+
+    generateTokenAndSetCookie(user._id, res);
+
+    res.status(200).json({
+      message: "Your user data",
+      data: user,
+    });
+  } catch (error) {
+    if (error) throw error.message;
+    res.status(500).json("Internal server error");
+  }
 };
 
 export const logout = (req, res) => {
-  res.send("Welcome to Logout Route");
+  try {
+    res.cookie("jwt", "", { maxAge: 0 });
+    res.status(200).json("Logout Successfully!");
+  } catch (error) {
+    if (error) throw error.message;
+    res.status(500).json("Internal server error");
+  }
 };
 
 export const getAllUsers = async (req, res) => {

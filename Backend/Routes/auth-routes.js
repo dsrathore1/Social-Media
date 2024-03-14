@@ -10,7 +10,7 @@ import {
 
 const authRoutes = Router();
 
-authRoutes.get("/getAllUsers", getAllUsers)
+authRoutes.get("/getAllUsers", getAllUsers);
 
 authRoutes.post("/signUp", signUp);
 
@@ -18,7 +18,7 @@ authRoutes.delete("/delete/:id", deleteOneUser);
 
 authRoutes.delete("/deleteAll", deleteAllUser);
 
-authRoutes.get("/login", login);
+authRoutes.post("/login", login);
 
 authRoutes.get("/logout", logout);
 

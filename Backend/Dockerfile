@@ -1,4 +1,4 @@
-FROM node:alpine3.19
+FROM node:lts-slim
 
 WORKDIR /app
 
@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 4000
+EXPOSE 4001
 
-CMD [ "npm ","run", "dev" ]
+CMD [ "npm","run", "dev" ]
